@@ -28,14 +28,15 @@
 
 :root{
   font-size: 18px;
-  --gray30:#212121;
-  --gray20:#212429;
+  --gray10:#212121;
+  --gray20:#424242;
   --gray30:#616161;
 }
 
 body{
   color: var(--gray30);
-  font-family: charter;
+  font-family: 'Roboto', sans-serif;
+  /*font-family: charter;*/
 }
 
 a{
@@ -43,7 +44,7 @@ a{
 }
 
 header{
-  color: var(--gray20);
+  color: var(--gray10);
 }
 header a {
   /*--gray10:red;*/
@@ -71,4 +72,13 @@ h2{
 
 h3{
   font-size: 1.5em;
+}
+
+pre {
+  background: #FEC62E;
+}
+
+.hero{
+  background: linear-gradient( to top, rgba(255, 255, 255, .3), transparent) ,url('../images/pattern.png');
+  height: 350px;
 }
