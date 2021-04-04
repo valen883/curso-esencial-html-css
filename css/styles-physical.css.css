@@ -1,0 +1,158 @@
+@font-face{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-italic.otf");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-bold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: charter;
+  src: url("../fonts/fonts/charter-bold-italic.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root{
+  font-size: 18px;
+  --gray30:#212121;
+  --gray20:#424242;
+  --gray10:#616161;
+ /* direction: rtl;*/
+}
+
+body{
+  color: var(--gray30);
+  font-family: 'Roboto', sans-serif;
+  /*font-family: charter;*/
+  margin: 0;
+}
+
+a{
+  color: var(--gray30);
+}
+
+header{
+  color: var(--gray20);
+}
+header a {
+  /*--gray10:red;*/
+  color: var(--gray20);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--gray10);
+}
+
+nav details summary{
+  font-weight: bold;
+}
+
+h1{
+  font-size: 60px;
+  /*text-decoration: underline;*/
+  /*font-size: 3.75em;*/
+  margin-top: 64px;
+  margin-bottom: 16px;
+/*  margin-left: 10px;
+  margin-right: 10px;
+  margin: top right bottom left;
+  margin: 64px 10px 16px 10px;*/
+}
+
+h1 ~ p{
+  margin-bottom: 64px;
+}
+
+hr{
+  margin: 64px 0;
+}
+
+h2{
+  font-size: 2em;
+  margin:64px 40px 0;
+  font-weight: normal;
+}
+
+h3{
+  font-size: 1.5em;
+  margin-top:16px;
+  margin-bottom: 24px;
+  font-weight: normal;
+}
+
+pre {
+  background: #FEC62E;
+}
+
+blockquote{
+  margin-top: 32px 0;
+}
+
+.hero{
+  background: linear-gradient( to top, rgba(255, 255, 255, .3), transparent) ,url('../images/pattern.png');
+  height: 350px;
+}
+
+.section-content{
+  margin-top: 164px;
+}
+
+.section-content:first-of-type{
+  margin: 0;
+}
+
+.section-content ol li{
+  line-height: 24px;
+}
+
+
+.section-content ul li{
+  margin-bottom: 16px;
+}
+
+.section-content ~ hr{
+  display: none;
+}
+
+.section-content img{
+  margin-top: 40px;
+}
+
+.section-content {
+  counter-reset: tittleList;
+}
+
+.section-content h3{
+  counter-increment: tittleList;
+}
+
+.section-content h3::before {
+  content: counter(tittleList, decimal) ;
+}
+
+  .section-content h3::after {
+  content: '';
+  width: 32px;
+  height: 4px;
+  background: var(--gray30);
+  display: inline-block;
+}
+
+/*::selection{
+  background:paleturquoise;
+}*/
