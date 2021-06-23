@@ -58,6 +58,12 @@ header a:hover {
   color: var(--gray10);
 }
 
+/*input {
+  width: 500px;
+  height: 20px;
+  padding: 10px;
+}*/
+
 nav details summary{
   font-weight: bold;
 }
@@ -68,10 +74,13 @@ h1{
   /*font-size: 3.75em;*/
   margin-top: 64px;
   margin-bottom: 16px;
-/*  margin-left: 10px;
+/*  margin-left: 20px;
   margin-right: 10px;
   margin: top right bottom left;
-  margin: 64px 10px 16px 10px;*/
+  margin: 64px 10px 16px 10px;
+  margin:10px 5px
+  margin:30px 20px 10px;*/
+/*  border: 1px solid red;*/
 }
 
 h1 ~ p{
@@ -93,14 +102,60 @@ h3{
   margin-top:16px;
   margin-bottom: 24px;
   font-weight: normal;
+  width: 200px;
+  padding: 20px;
+ /* border: 1px solid red;*/
 }
 
 pre {
   background: #FEC62E;
+  font-family: "Roboto";
+  padding: 40px;
+  line-height:24px;
 }
 
 blockquote{
-  margin-top: 32px 0;
+  font-size: 24px;
+  margin: 32px 0;
+  padding-left: 16px;
+  line-height: 24px;
+  /*border: 10px solid teal;
+  border-style: dotted;*/
+/* border-top: 10px solid pink;
+ border-top-color: tomato;
+ border-top-style: dashed;
+ border-radius: 50px 100px 10px 0;*/
+ border-left: 4px solid var(--gray30);
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+blockquote span::before {
+ content:"-";
+}
+
+.main{
+  background: linear-gradient( to top, rgba(255, 255, 255, .3), transparent) ,url('../images/pattern.png');
+}
+
+.wrapper{
+  width: 902px;
+  margin: auto;
+}
+
+.main-content{
+  background: white;
+  padding: 20px;
+}
+
+
+.debug{
+  box-shadow: inset 0 0 0 20px aqua;
+  outline: 1px solid aqua;
+  background: aqua;
+ /* border: 1px solid red !important;
+  box-sizing: border-box;*/
 }
 
 .hero{
@@ -139,10 +194,12 @@ blockquote{
 
 .section-content h3{
   counter-increment: tittleList;
+  /*background: teal;*/
+  padding-bottom: 4px;
 }
 
 .section-content h3::before {
-  content: counter(tittleList, decimal) ;
+  content: counter(tittleList, decimal) "." ;
 }
 
   .section-content h3::after {

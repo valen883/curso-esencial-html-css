@@ -93,7 +93,7 @@ pre {
 }
 
 .section-content h3::before {
-  content: counter(tittleList, decimal) ;
+  content: counter(tittleList, decimal,);
 }
 
   .section-content h3::after {
